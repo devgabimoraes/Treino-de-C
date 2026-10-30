@@ -176,6 +176,43 @@ int main(void) {
 //Questão 10:
 #include<stdio.h>
 int main(void) {
+    float valorHora;
+    float horasMes;
+
+    printf("\n»»»»» CALCULADORA DE SALÁRIO «««««\n");
+    printf("Digite o valor recebido por hora (€): \n");
+    scanf("%f", &valorHora);
+    printf("Digite a qtd de horas trabalhadas neste mês: \n");
+    scanf("%f", &horasMes);
+
+    float salarioBruto=valorHora*horasMes;
+    float segSocial=(salarioBruto*11)/100;
+    float salarioFinal=salarioBruto-segSocial;
+
+    printf("Valor hora: %.2f € \n",valorHora);
+    printf("Horas trabalhadas: %.2f \n",horasMes);
+    printf("Salário bruto: %.2f € \n",salarioBruto);
+    printf("Desconto Segurança Social: %.2f € \n",segSocial);
+    printf("Salário após desconto: %.2f € \n",salarioFinal);
+
+    return 0;
+}
+
+//Desafio adicional
+#include<stdio.h>
+int main(void) {
+    float peso;
+    float altura;
+
+    printf("\n»»»»» CALCULADORA DE IMC «««««\n");
+    printf("Digite seu peso (kg): \n");
+    scanf("%f", &peso);
+    printf("Digite sua altura (m): \n");
+    scanf("%f", &altura);
+
+    float imc=peso/(altura*altura);
+
+    printf("Peso: %.2f kg \n Altura: %.2f m \n O seu IMC é: %.2f \n", peso, altura, imc);
 
     return 0;
 }
